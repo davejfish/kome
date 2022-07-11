@@ -1,0 +1,59 @@
+table, td, th {
+    border-collapse: collapse;
+    border: solid 3px black;
+    padding: 5px;
+    margin: 10px;
+    width: 450px;
+}
+
+.wide {
+    width: 200px;
+}
+
+.short {
+    width: 25px;
+}
+
+tbody {
+    background-color: lightblue;
+}
+
+thead {
+    background-color: white;;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.add-rice {
+    display: flex;
+    flex-direction: column;
+    border: solid 3px black;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.add-rice label {
+    display: contents;
+    margin: 5px;
+    padding: 5px;
+}
+
+.add-rice input {
+    margin: 5px;
+    padding: 5px;
+}
+
+.add-rice select {
+    margin: 5px;
+    padding: 5px;
+}
+
+.add-rice button {
+    margin: 5px;
+    padding: 5px;
+    width: 60px;
+}

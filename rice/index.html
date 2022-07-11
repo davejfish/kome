@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="../assets/alchemy-favicon.png" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/rice.css" />
+    <title>Cool Web App</title>
+</head>
+
+<body>
+    <header>
+        <img src="../assets/html_css_js.png">
+        <h1>Cool Web App</h1>
+        <div id="user"></div>
+    </header>
+
+    <main>
+        <div class="paging-buttons">
+            <button>prefectures</button>
+            <button>rice</button>
+        </div>
+
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <td>rice</td>
+                        <td>prefecture</td>
+                        <td>added on</td>
+                    </tr>
+                </thead>
+                <tbody class="rice-table">
+                    <tr>
+                        <td>big rice</td>
+                        <td>niigata</td>
+                        <td>right now</td>
+                        <td class="short"><button>X</button></td>
+                    </tr>
+                    <tr>
+                        <td>small rice</td>
+                        <td>niigata</td>
+                        <td>right now</td>
+                        <td class="short"><button>X</button></td>
+                    </tr>
+                    <tr>
+                        <td>strange rice</td>
+                        <td>niigata</td>
+                        <td>right now</td>
+                        <td class="short"><button>X</button></td>
+                    </tr>
+                    <tr>
+                        <td>white rice</td>
+                        <td>niigata</td>
+                        <td>right now</td>
+                        <td class="short"><button>X</button></td>
+                    </tr>
+                    <tr>
+                        <td>super rice</td>
+                        <td>niigata</td>
+                        <td>right now</td>
+                        <td class="short"><button>X</button></td>
+                    </tr>
+                    <tr>
+                        <td>dave rice</td>
+                        <td>niigata</td>
+                        <td>right now</td>
+                        <td class="short"><button>X</button></td>
+                    </tr>
+                    <tr>
+                        <td>shan rice</td>
+                        <td>niigata</td>
+                        <td>right now</td>
+                        <td class="short"><button>X</button></td>
+                    </tr>
+                    <tr>
+                        <td>fancy rice</td>
+                        <td>niigata</td>
+                        <td>right now</td>
+                        <td class="short"><button>X</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <form class="add-rice">
+                <label>
+                    rice name:
+                    <input name="rice-name">
+                </label>
+                <label>
+                    made in:
+                    <select name="made-in">
+                        <option>option here</option>
+                        <option>option here</option>
+                        <option>option here</option>
+                        <option>option here</option>
+                    </select>
+                </label>
+                <button>submit</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>&copy;2022 Aspiring Software Developer</footer>
+
+    <script type="module" src="../rice/rice.js"></script>
+</body>
+
+</html>

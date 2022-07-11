@@ -16,6 +16,7 @@ header {
     top: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--header-background);
 }
 
@@ -24,6 +25,7 @@ header {
     margin-right: 20px;
     text-align: right;
     display: grid;
+    width: 100px;
 }
 
 #user a {
@@ -48,4 +50,21 @@ footer {
     display: flex;
     justify-content: flex-end;
     background-color: var(--footer-background);
+}
+
+.paging-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.paging-buttons button {
+    margin: 10px;
+    border: none;
+    background: none;
+    font-size: 2em;
+}
+
+.paging-buttons button:hover {
+    background-color: aqua;
 }
