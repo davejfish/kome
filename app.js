@@ -1,14 +1,18 @@
 import { getUser, signOut } from './services/auth-service.js';
 import { protectPage } from './utils.js';
 import createUser from './components/User.js';
+import createPrefectures from './components/Prefectures.js';
+import { getPrefectureRice } from './services/client.js';
 
 // State
-let user = null;
+import state from './state.js';
 
 // Action Handlers
 async function handlePageLoad() {
-    user = getUser();
-    protectPage(user);
+    state.user = getUser();
+    protectPage(state.user);
+
+    state.prefectures = await getPrefectureRice();
 
     display();
 }
@@ -23,9 +27,11 @@ const User = createUser(
     { handleSignOut }
 );
 
-function display() {
-    User({ user });
+const Prefectures = createPrefectures(document.querySelector('.pref-cards'));
 
+function display() {
+    User({ user: state.user });
+    Prefectures({ prefectures: state.prefectures });
 }
 
 handlePageLoad();
