@@ -8,7 +8,7 @@ body {
     height: 100%;
     padding-bottom: 30px;
     font-family: 'Rubik', san-serif;
-    background: var(--background);
+    background: #562151;
 }
 
 header {
@@ -16,7 +16,8 @@ header {
     top: 0;
     display: flex;
     align-items: center;
-    background-color: var(--header-background);
+    justify-content: space-between;
+    background-color: #FFE9CA;
 }
 
 #user {
@@ -24,11 +25,12 @@ header {
     margin-right: 20px;
     text-align: right;
     display: grid;
+    width: 100px;
 }
 
 #user a {
     font-size: .8em;
-    color:steelblue;
+    color: steelblue;
 }
 
 .hidden {
@@ -37,6 +39,7 @@ header {
 
 main {
     height: 100%;
+    background-color: #562151;
 }
 
 footer {
@@ -47,5 +50,30 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--footer-background);
+    background-color: #FFE9CA;
+}
+
+.paging-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.paging-buttons button {
+    margin: 10px;
+    border: none;
+    background: none;
+    font-size: 2em;
+    color: #D7713B;
+}
+
+.paging-buttons button:hover {
+    background-color: #FFE9CA;
+}
+
+.paging-buttons button:disabled,
+button[disabled] {
+    color: grey;
+    text-decoration: line-through;
+    opacity: .5;
 }
