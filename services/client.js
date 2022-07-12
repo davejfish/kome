@@ -49,8 +49,8 @@ export async function getRicePrefecture() {
             prefectures(
                 prefName, 
                 id
-            )`
-        );
+            )`)
+        .order('created_at', { ascending: false });
     return checkResponse(response);
 }
 

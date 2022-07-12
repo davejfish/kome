@@ -22,6 +22,7 @@ function createTable(kome, handleDeleteRice) {
     const td3 = document.createElement('td');
     td3.textContent = new Date(kome.created_at);
 
+
     const td4 = document.createElement('td');
     td4.classList.add('short');
     const deleteButton = deleteRice(kome, handleDeleteRice);
