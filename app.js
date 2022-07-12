@@ -2,7 +2,7 @@ import { getUser, signOut } from './services/auth-service.js';
 import { protectPage, findByID } from './utils.js';
 import createUser from './components/User.js';
 import createPrefectures from './components/Prefectures.js';
-import { getPrefectureRice, addRice, deleteRice } from './services/client.js';
+import { getPrefectureRice, addRice, deleteRice, updateRice } from './services/client.js';
 
 // State
 import state from './state.js';
@@ -41,6 +41,10 @@ async function handleDeleteRice(kome) {
     display();
 }
 
+export default async function handleUpdateRice(prefID, id) {
+    await updateRice(prefID, id);
+}
+
 async function handleSignOut() {
     signOut();
 }
@@ -53,7 +57,8 @@ const User = createUser(
 
 const Prefectures = createPrefectures(document.querySelector('.pref-cards'), {
     handleAddRice,
-    handleDeleteRice
+    handleDeleteRice,
+    handleUpdateRice
 });
 
 function display() {

@@ -73,3 +73,12 @@ export async function deleteRice(id) {
         .single();
     return checkResponse(response);
 }
+
+export async function updateRice(prefID, id) {
+    const response = await client
+        .from('kome')
+        .update({ prefID: prefID })
+        .match({ id })
+        .single();
+    return checkResponse(response);
+}

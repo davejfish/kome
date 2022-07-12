@@ -1,3 +1,5 @@
+import handleUpdateRice from '../app.js';
+
 export default function createPrefectures(root, { handleAddRice, handleDeleteRice }) {
 
     return ({ prefectures }) => {
@@ -22,6 +24,7 @@ function addPrefecture({ prefecture, handleAddRice, handleDeleteRice }) {
 
     const ul = document.createElement('ul');
     ul.classList.add('rice-list');
+    if (prefecture.kome[0]) ul.setAttribute('id', prefecture.kome[0].prefID);
 
     ul.addEventListener('dragenter', dragEnter);
     ul.addEventListener('dragover', dragOver);
@@ -77,8 +80,7 @@ function updateRice({ prefecture, handleAddRice }) {
 }
 
 function dragStart(e) {
-    // console.log('we draggin stuff');
-    // console.log('target id: ', e.target.id);
+    // rice id
     e.dataTransfer.setData('text/plain', e.target.id);
     setTimeout(() => {
         e.target.classList.add('hidden');
@@ -107,10 +109,11 @@ function drop(e) {
     const draggable = document.getElementById(id);
 
     // add it to the drop target
+    // here e.target is pref id
     if (e.target.tagName === 'UL') {
         e.target.appendChild(draggable);
+        handleUpdateRice(e.target.id, id);
     }
-
 
     // display draggable element
     draggable.classList.remove('hidden');
