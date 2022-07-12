@@ -8,7 +8,7 @@ body {
     height: 100%;
     padding-bottom: 30px;
     font-family: 'Rubik', san-serif;
-    background: var(--background);
+    background: #562151;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--header-background);
+    background-color: #FFE9CA;
 }
 
 #user {
@@ -39,6 +39,7 @@ header {
 
 main {
     height: 100%;
+    background-color: #562151;
 }
 
 footer {
@@ -49,7 +50,7 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--footer-background);
+    background-color: #FFE9CA;
 }
 
 .paging-buttons {
@@ -63,10 +64,11 @@ footer {
     border: none;
     background: none;
     font-size: 2em;
+    color: #D7713B;
 }
 
 .paging-buttons button:hover {
-    background-color: aqua;
+    background-color: #FFE9CA;
 }
 
 .paging-buttons button:disabled,

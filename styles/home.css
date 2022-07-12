@@ -10,8 +10,9 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border: 3px solid blueviolet;
+    border: 3px solid #FBB95D;
     padding: 10px;
+    background-color: #D7713B;
 }
 
 .card span {
@@ -42,7 +43,7 @@
 }
 
 li:hover {
-    background-color: red;
+    background-color: #FBB95D;
 }
 
 .tooltip {

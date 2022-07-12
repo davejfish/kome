@@ -19,11 +19,11 @@ th {
 }
 
 tbody {
-    background-color: lightblue;
+    background-color: #D7713B;
 }
 
 thead {
-    background-color: white;
+    background-color: #FFE9CA;
     ;
 }
 
@@ -39,6 +39,7 @@ section {
     border: solid 3px black;
     height: 200px;
     margin-top: 10px;
+    background-color: #D7713B;
 }
 
 .add-rice label {
@@ -61,4 +62,5 @@ section {
     margin: 5px;
     padding: 5px;
     width: 60px;
+    border-radius: 8px;
 }
