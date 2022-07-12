@@ -58,6 +58,7 @@ const Prefectures = createPrefectures(document.querySelector('.pref-cards'), {
 
 function display() {
     User({ user: state.user });
+    // PagingButtons();
     Prefectures({ prefectures: state.prefectures });
 }
 

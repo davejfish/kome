@@ -30,7 +30,7 @@ header {
 
 #user a {
     font-size: .8em;
-    color:steelblue;
+    color: steelblue;
 }
 
 .hidden {
@@ -67,4 +67,11 @@ footer {
 
 .paging-buttons button:hover {
     background-color: aqua;
+}
+
+.paging-buttons button:disabled,
+button[disabled] {
+    color: grey;
+    text-decoration: line-through;
+    opacity: .5;
 }

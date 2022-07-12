@@ -55,7 +55,6 @@ const User = createUser(
 );
 
 const RiceList = createRiceList(document.querySelector('.rice-table'), handleDeleteRice);
-
 const CreateForm = createForm(document.querySelector('.add-rice'), handleAddRice);
 
 function display() {
