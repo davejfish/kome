@@ -1,8 +1,8 @@
 import { getUser, signOut } from './services/auth-service.js';
-import { protectPage } from './utils.js';
+import { protectPage, findByID } from './utils.js';
 import createUser from './components/User.js';
 import createPrefectures from './components/Prefectures.js';
-import { getPrefectureRice } from './services/client.js';
+import { getPrefectureRice, addRice } from './services/client.js';
 
 // State
 import state from './state.js';
@@ -17,6 +17,16 @@ async function handlePageLoad() {
     display();
 }
 
+async function handleAddRice(riceName, prefID) {
+    const newRice = await addRice(riceName, prefID);
+
+    const pref = findByID(state.prefectures, prefID);
+
+    pref.kome.push(newRice);
+
+    display();
+}
+
 async function handleSignOut() {
     signOut();
 }
@@ -27,7 +37,7 @@ const User = createUser(
     { handleSignOut }
 );
 
-const Prefectures = createPrefectures(document.querySelector('.pref-cards'));
+const Prefectures = createPrefectures(document.querySelector('.pref-cards'), { handleAddRice });
 
 function display() {
     User({ user: state.user });

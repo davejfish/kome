@@ -36,5 +36,15 @@ export async function getPrefectureRice() {
         )`
         );
     return checkResponse(response);
+}
 
+export async function addRice(riceName, prefID) {
+    const response = await client
+        .from('kome')
+        .insert({
+            riceName,
+            prefID
+        })
+        .single();
+    return checkResponse(response);
 }
