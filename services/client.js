@@ -33,7 +33,23 @@ export async function getPrefectureRice() {
             id,
             prefID, 
             riceName
-        )`
+        )`)
+        .order('created_at', { ascending: false });
+    return checkResponse(response);
+}
+
+export async function getRicePrefecture() {
+    const response = await client
+        .from('kome')
+        .select(`
+            riceName, 
+            created_at, 
+            prefID, 
+            id, 
+            prefectures(
+                prefName, 
+                id
+            )`
         );
     return checkResponse(response);
 }

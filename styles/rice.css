@@ -1,9 +1,13 @@
-table, td, th {
+table,
+td,
+th {
     border-collapse: collapse;
     border: solid 3px black;
     padding: 5px;
     margin: 10px;
     width: 450px;
+    margin-bottom: 50px;
+    align-items: center;
 }
 
 .wide {
@@ -19,7 +23,8 @@ tbody {
 }
 
 thead {
-    background-color: white;;
+    background-color: white;
+    ;
 }
 
 section {
