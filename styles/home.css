@@ -57,3 +57,11 @@ li:hover {
     text-align: center;
     padding: 5px;
 }
+
+.hidden {
+    display: none;
+}
+
+.drag-over {
+    border: solid 3px pink;
+}
