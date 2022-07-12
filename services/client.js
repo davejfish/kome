@@ -48,3 +48,12 @@ export async function addRice(riceName, prefID) {
         .single();
     return checkResponse(response);
 }
+
+export async function deleteRice(id) {
+    const response = await client
+        .from('kome')
+        .delete()
+        .eq('id', id)
+        .single();
+    return checkResponse(response);
+}

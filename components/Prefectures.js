@@ -1,18 +1,18 @@
-export default function createPrefectures(root, { handleAddRice }) {
+export default function createPrefectures(root, { handleAddRice, handleDeleteRice }) {
 
     return ({ prefectures }) => {
         root.innerHTML = '';
 
         for (let prefecture of prefectures) {
 
-            const card = addPrefecture({ prefecture, handleAddRice });
+            const card = addPrefecture({ prefecture, handleAddRice, handleDeleteRice });
 
             root.append(card);
         }
     };
 }
 
-function addPrefecture({ prefecture, handleAddRice }) {
+function addPrefecture({ prefecture, handleAddRice, handleDeleteRice }) {
 
     const div = document.createElement('div');
     div.classList.add('card');
@@ -27,6 +27,11 @@ function addPrefecture({ prefecture, handleAddRice }) {
         let li = document.createElement('li');
         li.classList.add('rice-box');
         li.textContent = rice.riceName;
+
+        li.addEventListener('click', () => {
+            handleDeleteRice(rice);
+        });
+
         ul.append(li);
     }
 
