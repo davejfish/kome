@@ -33,10 +33,8 @@ async function handleDeleteRice(kome) {
 
     await deleteRice(kome.id);
 
-    const pref = findByID(state.prefectures, kome.prefID);
-    const index = pref.kome.indexOf(kome);
-
-    pref.kome.splice(index, 1);
+    const index = state.rice.indexOf(kome);
+    state.rice.splice(index, 1);
 
     display();
 }
@@ -51,7 +49,7 @@ const User = createUser(
     { handleSignOut }
 );
 
-const RiceList = createRiceList(document.querySelector('.rice-table'));
+const RiceList = createRiceList(document.querySelector('.rice-table'), handleDeleteRice);
 
 function display() {
     User({ user: state.user });
